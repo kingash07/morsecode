@@ -15,7 +15,6 @@ morseCode = {"a": "▄ ▄▄▄", "b": "▄▄▄ ▄ ▄ ▄", "c": "▄▄▄
              "4": "▄ ▄ ▄ ▄ ▄▄▄", "5": "▄ ▄ ▄ ▄ ▄", "6": "▄▄▄ ▄ ▄ ▄ ▄", "7": "▄▄▄ ▄▄▄ ▄ ▄ ▄", "8": "▄▄▄ ▄▄▄ ▄▄▄ ▄ ▄",
              "9": "▄▄▄ ▄▄▄ ▄▄▄ ▄▄▄ ▄", "0": "▄▄▄ ▄▄▄ ▄▄▄ ▄▄▄ ▄▄▄", }
 
-textInput = input("What is Your Name: ")
-for n in textInput:
-    newN=n.lower()
-    print(f"{n} :{morseCode.get(newN)}")
+textInput = input("Write Some Text TO convert It to Morse Code:\n ")
+convertedText = [morseCode.get(n.lower()) for n in textInput if morseCode.get(n.lower())]
+print(convertedText)
