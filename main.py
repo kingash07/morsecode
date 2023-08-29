@@ -16,3 +16,6 @@ morseCode = {"a": "▄ ▄▄▄", "b": "▄▄▄ ▄ ▄ ▄", "c": "▄▄▄
              "9": "▄▄▄ ▄▄▄ ▄▄▄ ▄▄▄ ▄", "0": "▄▄▄ ▄▄▄ ▄▄▄ ▄▄▄ ▄▄▄", }
 
 textInput = input("What is Your Name: ")
+for n in textInput:
+    newN=n.lower()
+    print(f"{n} :{morseCode.get(newN)}")
